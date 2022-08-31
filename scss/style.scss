@@ -13,17 +13,27 @@ body {
   // min-height: 100vh;
 }
 
+.colorm {
+  fill: unset;
+  color: #fff;
+  opacity: 60%;
+
+
+}
+
+
+
 @import "mixins";
-@import "often-used";
+// @import "often-used";
 // @import "blocks";
-@import "header";
-@import "page";
-@import 'payment';
-@import 'tickets';
-@import 'dates';
-@import 'search';
-@import 'main-nav';
-@import "tickets";
+// @import "header";
+// @import "page";
+// @import 'payment';
+// @import 'tickets';
+// @import 'dates';
+// @import 'search';
+// @import 'main-nav';
+// @import "tickets";
 // @import "promo";
 // @import "about";
 // @import "park";
@@ -49,21 +59,4 @@ body {
   align-items: center;
   grid-template-columns: repeat(3, auto);
   grid-auto-flow: column;
-}
-.t1 {
-  // width: 20px;
-  // height: 20px;
-  background-color: green;
-}
-.t2 {
-  // width: 20px;
-  // height: 20px;
-  background-color: pink;
-  grid-column: 1 / 2;
-  // grid-row: 1 /2;
-}
-.t3 {
-  // width: 20px;
-  // height: 20px;
-  background-color: blue;
 }
