@@ -1,0 +1,120 @@
+.catalog {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  h2 {
+    margin: 0;
+    margin-left: 100px;
+    font-family: "Old Standard TT";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 54px;
+    /* or 129% */
+
+    text-transform: uppercase;
+  }
+
+  &__card-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+
+  &__card {
+    background-color: #fff;
+    grid-column: span 4;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 36px;
+    &--wide {
+      grid-column: span 6;
+      grid-template-columns: auto 1fr;
+      align-content: center;
+
+      .catalog__title {
+        grid-row: 1/2;
+        margin-left: 16px;
+      }
+      .catalog__img {
+        margin: 0;
+        grid-column: 1/2;
+        grid-row: 1/5;
+      }
+      .catalog__price {
+        grid-row: 2/3;
+        margin-left: 16px;
+      }
+      .catalog__text {
+        grid-row: 3/4;
+        width: 250px;
+        margin-left: 16px;
+      }
+      .catalog__link {
+        grid-row: 4/5;
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 36px 36px 0 36px;
+
+    font-family: "Old Standard TT";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  &__img {
+    grid-row: 1/2;
+  }
+
+  &__price {
+    margin: 0 36px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    /* identical to box height, or 109% */
+
+    color: #343235;
+    &--wide {
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin: 0 36px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+
+    color: #695a59;
+
+    opacity: 0.6;
+  }
+
+  &__link {
+    margin: 12px 36px 40px 36px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    color: #9a8584;
+    &::after {
+      content: "";
+      width: 85px;
+      height: 5px;
+      background: url(../img/cat-arr.png) no-repeat center;
+      margin-left: 16px;
+    }
+  }
+}

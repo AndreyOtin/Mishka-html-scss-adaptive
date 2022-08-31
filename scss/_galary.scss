@@ -1,0 +1,24 @@
+.galary {
+  &__title {
+  }
+
+  &__text {
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 20px;
+    // grid-auto-flow: column;
+
+    img {
+      grid-column: span 6;
+
+    }
+
+    .big {
+      grid-row: span 2;
+    }
+  }
+}

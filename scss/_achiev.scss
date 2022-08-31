@@ -1,0 +1,74 @@
+.achiev {
+  padding-bottom: 80px;
+  button {
+    grid-row: 1/2;
+    width: 72px;
+    height: 72px;
+    border: none;
+    background-color: transparent;
+    background: url(../img/sliderar.png) no-repeat center;
+  }
+
+  &__title {
+    margin-left: 100px;
+  }
+
+  &__slider {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  &__img {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    width: 100%;
+  }
+
+  &__text-wraper{
+    background: rgba(52, 50, 53, 0.9);
+    grid-row: 1/2;
+    grid-column: 2/3;
+    z-index: 1;
+    align-self: end;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__text {
+
+
+
+
+    font-family: "Old Standard TT";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    /* identical to box height, or 112% */
+
+    color: #f5f2ed;
+  }
+
+  &__link {
+
+ align-self: center;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #f5f2ed;
+  }
+
+  &__back {
+    transform: scale(-1, 1);
+  }
+
+  &__forward {
+    grid-column: 3/4;
+  }
+}

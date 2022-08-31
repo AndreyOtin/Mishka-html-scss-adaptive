@@ -1,0 +1,64 @@
+.main-header {
+  padding: 20px 60px;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background: #ecf2ff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  text-transform: uppercase;
+
+  color: #5957db;
+
+  &__logo {
+    margin-right: 102px;
+  }
+}
+.breadcramps {
+  @include listNone;
+  @include flexWrap;
+
+  &__item {
+    position: relative;
+    margin-right: 46px;
+    &:not(:last-child)::after {
+      right: -23px;
+      top: 25%;
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: url(../img/tr.png) no-repeat center;
+    }
+  }
+
+  &__link {
+
+  }
+
+  &__item--active {
+    color: #666666;
+  }
+}
+.form {
+  &__select-wrapper {
+  }
+
+  &__select-wrapper-- {
+  }
+
+  &__label {
+  }
+
+  &__label-- {
+  }
+
+  &__select {
+  }
+
+  &__select-- {
+  }
+}

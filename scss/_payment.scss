@@ -1,0 +1,27 @@
+.payment {
+  grid-area: payment;
+  padding: 40px 60px;
+  display: grid;
+  a {
+    background: #43d000;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height, or 125% */
+
+
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+span{
+    margin-right: auto;
+}
+
+
+}
+}
