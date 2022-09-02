@@ -1,0 +1,125 @@
+.catalog {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  h2 {
+    font-family: "Old Standard TT";
+    font-size: 42px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 54px;
+
+    margin: 0;
+    margin-left: 100px;
+    /* or 129% */
+
+    text-transform: uppercase;
+  }
+
+  &__card-container {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+
+  &__card {
+    display: grid;
+
+    background-color: #fff;
+    grid-column: span 4;
+    row-gap: 20px;
+    column-gap: 36px;
+    &--wide {
+      align-content: center;
+
+      grid-column: span 6;
+      grid-template-columns: auto 1fr;
+      .catalog__title {
+        margin-left: 16px;
+
+        grid-row: 1/2;
+      }
+      .catalog__img {
+        margin: 0;
+        grid-column: 1/2;
+        grid-row: 1/5;
+      }
+      .catalog__price {
+        margin-left: 16px;
+
+        grid-row: 2/3;
+      }
+      .catalog__text {
+        width: 250px;
+        margin-left: 16px;
+
+        grid-row: 3/4;
+      }
+      .catalog__link {
+        margin-left: 16px;
+
+        grid-row: 4/5;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Old Standard TT";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+
+    margin: 36px 36px 0 36px;
+  }
+
+  &__img {
+    grid-row: 1/2;
+  }
+
+  &__price {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+
+    margin: 0 36px;
+    /* identical to box height, or 109% */
+
+    color: #343235;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+
+    margin: 0;
+    margin: 0 36px;
+    opacity: 0.6;
+
+    /* or 143% */
+    color: #695a59;
+  }
+
+  &__link {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    margin: 12px 36px 40px 36px;
+    /* identical to box height, or 133% */
+
+    text-transform: uppercase;
+    color: #9a8584;
+
+    &::after {
+      width: 85px;
+      height: 5px;
+      margin-left: 16px;
+
+      content: "";
+      background: url(../img/cat-arr.png) no-repeat center;
+    }
+  }
+}

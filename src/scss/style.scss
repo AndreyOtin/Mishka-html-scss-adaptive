@@ -1,0 +1,46 @@
+@import "variables";
+@import "mixins";
+@import "often-used";
+@import "blocks";
+@import "header";
+// @import "page";
+// @import 'payment';
+// @import 'tickets';
+// @import 'dates';
+// @import 'search';
+// @import 'main-nav';
+// @import "tickets";
+// @import "promo";
+// @import "about";
+// @import "park";
+// @import "catalog";
+// @import "achiev";
+// @import "mission";
+// @import "form";
+// @import "offers";
+// @import "partners";
+// @import "team";
+
+// @import "services";
+// @import "galary";
+// @import "reviews";
+// @import "gifts";
+// @import "projects";
+// @import "contacts";
+// @import "footer";
+
+body {
+  margin: 0;
+  padding: 0 0px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+
+  min-width: 1920px;
+  // background: #e5e5e5;
+  // color: #695a59;
+  // min-height: 100vh;
+}

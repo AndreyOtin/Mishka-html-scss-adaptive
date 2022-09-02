@@ -1,0 +1,133 @@
+.container {
+  width: 1300px;
+  margin: 0 auto;
+  &--big {
+    width: 1760px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(100%);
+}
+
+.site-nav {
+  @include listNone;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #06a9b3;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 8px;
+  &::before {
+    width: 20px;
+    height: 20px;
+    content: "0" counter(title);
+    counter-increment: title;
+  }
+
+  &::after {
+    width: 81px;
+    height: 2px;
+    content: "";
+    background-color: #06a9b3;
+    grid-column: 2 / span 1;
+    grid-row: 1;
+  }
+
+  &--center {
+    &::before {
+      position: absolute;
+      top: calc(50% + 33px);
+      left: 50%;
+      width: 86px;
+      height: 2px;
+      content: "";
+      transform: translateX(-50%);
+      background-color: #fff;
+    }
+  }
+}
+
+.border {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 22px;
+    left: 27px;
+    width: 100%;
+    content: "";
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+.socials {
+  display: grid;
+  align-items: start;
+
+  @include listNone;
+  grid-template-columns: repeat(3, auto);
+  justify-items: start;
+  gap: 10px 73px;
+  &__item {
+    &:last-child {
+      // margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }
+
+  &__link--f {
+    background: url("../img/f.png") no-repeat center;
+  }
+  &__link--v {
+    background: url("../img/v.png") no-repeat center;
+  }
+  &__link--w {
+    background: url("../img/whatsapp.svg") no-repeat center;
+  }
+  &__link--i {
+    background: url("../img/i.png") no-repeat center;
+  }
+  &__link--t {
+    background: url("../img/Twitter.svg") no-repeat center;
+  }
+}
+
+.link {
+  font-weight: 500;
+  line-height: 20px;
+  display: inline-block;
+  padding: 16px 32px;
+  color: #fff;
+  background: #06a9b3;
+}
+
+.break {
+  flex-basis: 100%;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
