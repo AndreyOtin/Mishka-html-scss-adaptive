@@ -1,8 +1,11 @@
 .container {
-  width: 1300px;
+  width: 320px;
   margin: 0 auto;
-  &--big {
-    width: 1760px;
+  &--tablet {
+    width: $tablet-width;
+  }
+  &--desctop {
+    width: $desktop-width;
   }
 }
 
@@ -24,22 +27,9 @@
 }
 
 .title {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 20px;
-
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  color: #06a9b3;
-  grid-template-columns: repeat(3, auto);
-  column-gap: 8px;
   &::before {
-    width: 20px;
-    height: 20px;
-    content: "0" counter(title);
     counter-increment: title;
+    content: "0" counter(title);
   }
 
   &::after {
@@ -82,20 +72,15 @@
   align-items: start;
 
   @include listNone;
-  grid-template-columns: repeat(3, auto);
-  justify-items: start;
-  gap: 10px 73px;
+
   &__item {
     &:last-child {
-      // margin-right: 0;
+      margin-right: 0;
     }
   }
 
   &__link {
     display: block;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
   }
 
   &__link--f {
@@ -115,13 +100,8 @@
   }
 }
 
-.link {
-  font-weight: 500;
-  line-height: 20px;
+.btn {
   display: inline-block;
-  padding: 16px 32px;
-  color: #fff;
-  background: #06a9b3;
 }
 
 .break {

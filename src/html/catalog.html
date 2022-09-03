@@ -1,139 +1,122 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.min.css" />
-    <title>Каталог</title>
-  </head>
-  <body>
-    <header class="main-header">
-      <nav class="main-header__nav main-header__nav--">
-        <a href="#" class="main-header__logo">
-          <a href="#" class="main-header__logo">
-            <include src="src/img/icons/logo-copy.svg">
-              {
-                "width": "68",
-                "height": "35"
-              }
-            </include>
-          </a>
-        </a>
-        <ul class="main-header__site-nav site-nav">
-          <li class="site-nav__item">
-            <a href="#" class="site-nav__link"></a>
-          </li>
-        </ul>
-        <ul class="user-navigation">
-          <li class="user-navigation__item">
-            <a href="#" class="user-navigation__link"></a>
-          </li>
-        </ul>
-      </nav>
-      <button class="main-header__button main-header__button--"></button>
-    </header>
-    <main>
-      <section class="catalog">
-        <h1 class="catalog__title">Каталог товару</h1>
-        <ul class="catalog__list">
-          <li class="catalog__item">
-            <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
-            <img src="../img/catalog/photo-1-mobile.jpg" alt="" />
-            <p class="catalog__text">Рост 30 см, вес 200 г</p>
-            <p class="catalog__price">1 200 руб.</p>
-            <button class="catalog__button icon">
-              <span class="visually-hidden">Добавить в корзину</span>
-            </button>
-          </li>
 
-          <li class="catalog__item">
-            <h3 class="catalog__item-title">Корзинка для белья</h3>
-            <img src="../img/catalog/photo-2-mobile.jpg" alt="" />
-            <p class="catalog__text">Диаметр 15 см, высота 10 см</p>
-            <p class="catalog__price">690 руб.</p>
-            <button class="catalog__button icon">
-              <span class="visually-hidden">Добавить в корзину</span>
-            </button>
-          </li>
-          <li class="catalog__item">
-            <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
-            <img src="../img/catalog/photo-3-mobile.jpg" alt="" />
-            <p class="catalog__text">Диаметр 30 см, высота 30 см</p>
-            <p class="catalog__price">1 500 руб.</p>
-            <button class="catalog__button icon">
-              <span class="visually-hidden">Добавить в корзину</span>
-            </button>
-          </li>
-        </ul>
-      </section>
-      <section class="product">
-        <h2 class="product__title">Процесс производства</h2>
-        <video src="#" class="product__video"></video>
-        <button class="product__button">Включить видео</button>
-        <p class="product__text">
-          По просьбам наших любимых фолловеров мы сняли для вас подробное видео
-          о том, как появляются наши товары.
-        </p>
-        <a href="#" class="product__link">Сделать заказ</a>
-      </section>
-    </main>
-    <footer class="main-footer">
-      <ul class="main-footer__socials socials">
-        <li class="socials__item">
-          <a href="#" class="socials__link socials__link--">
-            Инстаграмм
-            <svg width="22" height="21"
-            class="main-footer__html-icon"
-            aria-hidden="true"
-            role="presentation"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use xlink:href="@img/icons/sprite.svg#inst"></use>
-          </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a href="#" class="socials__link socials__link--">
-            <span class="visually-hidden">Фейсбук</span>
-            <svg width="15" height="28"
-            class="main-footer__html-icon"
-            aria-hidden="true"
-            role="presentation"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use xlink:href="@img/icons/sprite.svg#fb"></use>
-          </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a href="#" class="socials__link socials__link--">
-            <span class="visually-hidden">Твитер</span>
-            <svg width="23" height="20"
-            class="main-footer__html-icon"
-            aria-hidden="true"
-            role="presentation"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use xlink:href="@img/icons/sprite.svg#tw"></use>
-          </svg>
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Страница Каталога</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="main-header__nav main-header__nav--">
+      <a href="#" class="main-header__logo">
+        <a href="#" class="main-header__logo">
+          <include src="src/img/icons/logo-copy.svg">
+            {
+            "width": "68",
+            "height": "35"
+            }
+          </include>
+        </a>
+      </a>
+      <ul class="main-header__site-nav site-nav">
+        <li class="site-nav__item">
+          <a href="#" class="site-nav__link"></a>
         </li>
       </ul>
-      <p class="main-footer__copyright">
-        Разработано
-        <a class="main-footer__html-link" href="#">
-          <span class="visually-hidden">HTMl Acadamy</span>
-          <svg width="27" height="34"
-            class="main-footer__html-icon"
-            aria-hidden="true"
-            role="presentation"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use xlink:href="@img/icons/sprite.svg#html"></use>
+      <ul class="user-navigation">
+        <li class="user-navigation__item">
+          <a href="#" class="user-navigation__link"></a>
+        </li>
+      </ul>
+    </nav>
+    <button class="main-header__button main-header__button--"></button>
+  </header>
+  <main class="catalog-page">
+    <section class="catalog">
+      <h1 class="catalog__title">Каталог товаров</h1>
+      <ul class="catalog__list">
+        <li class="catalog__item">
+          <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
+          <img src="../img/catalog/photo-1-mobile.jpg" alt="" />
+          <p class="catalog__text">Рост 30 см, вес 200 г</p>
+          <p class="catalog__price">1 200 руб.</p>
+          <button class="catalog__button icon">
+            <span class="visually-hidden">Добавить в корзину</span>
+          </button>
+        </li>
+
+        <li class="catalog__item">
+          <h3 class="catalog__item-title">Корзинка для белья</h3>
+          <img src="../img/catalog/photo-2-mobile.jpg" alt="" />
+          <p class="catalog__text">Диаметр 15 см, высота 10 см</p>
+          <p class="catalog__price">690 руб.</p>
+          <button class="catalog__button icon">
+            <span class="visually-hidden">Добавить в корзину</span>
+          </button>
+        </li>
+        <li class="catalog__item">
+          <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
+          <img src="../img/catalog/photo-3-mobile.jpg" alt="" />
+          <p class="catalog__text">Диаметр 30 см, высота 30 см</p>
+          <p class="catalog__price">1 500 руб.</p>
+          <button class="catalog__button icon">
+            <span class="visually-hidden">Добавить в корзину</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+    <section class="product">
+      <h2 class="product__title">Процесс производства</h2>
+      <video src="#" class="product__video"></video>
+      <button class="product__button">Включить видео</button>
+      <p class="product__text">
+        По просьбам наших любимых фолловеров мы сняли для вас подробное видео
+        о том, как появляются наши товары.
+      </p>
+      <a href="#" class="product__link">Сделать заказ</a>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <ul class="main-footer__socials socials">
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--">
+          Инстаграмм
+          <svg width="22" height="21" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="@img/icons/sprite.svg#inst"></use>
           </svg>
         </a>
-      </p>
-    </footer>
-  </body>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--">
+          <span class="visually-hidden">Фейсбук</span>
+          <svg width="15" height="28" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="@img/icons/sprite.svg#fb"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--">
+          <span class="visually-hidden">Твитер</span>
+          <svg width="23" height="20" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="@img/icons/sprite.svg#tw"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <p class="main-footer__copyright">
+      Разработано
+      <a class="main-footer__html-link" href="#">
+        <span class="visually-hidden">HTMl Acadamy</span>
+        <svg width="27" height="34" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="@img/icons/sprite.svg#html"></use>
+        </svg>
+      </a>
+    </p>
+  </footer>
+</body>
+
 </html>

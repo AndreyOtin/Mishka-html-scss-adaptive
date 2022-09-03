@@ -82,7 +82,7 @@ function images(done) {
     .pipe(gulp.src(paths.files.srcSvg))
     .pipe(newer(paths.folder.buildImgs))
     .pipe(gulp.dest(paths.folder.buildImgs))
-
+    .pipe(browserSync.stream())
   done()
 }
 
