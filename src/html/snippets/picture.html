@@ -1,0 +1,29 @@
+<picture>
+  <source
+    srcset="
+      {{descktopSrcWebp}},
+      {{descktopSrcWebp2}} 2x,
+      {{descktopSrcWebp3}} 3x
+    "
+    media="(min-width: {{descktopMedia}})"
+    type="image/webp"
+  />
+  <source
+    srcset="{{tabletSrcWebp}}, {{tabletSrcWebp2}} 2x, {{tabletSrcWebp3}} 3x"
+    media="(min-width: {{tabletMedia}})"
+    type="image/webp"
+  />
+  <source
+    srcset="{{SrcWebp}}, {{SrcWebp2}} 2x, {{SrcWebp3}} 3x"
+    type="image/webp"
+  />
+  <source
+    srcset="{{descktopSrc}}, {{descktopSrc2}} 2x, {{descktopSrc3}} 3x"
+    media="(min-width: {{descktopMedia}})"
+  />
+  <source
+    srcset="{{tabletSrc}}, {{tabletSrc2}} 2x, {{tabletSrc3}} 3x"
+    media="(min-width: {{tabletMedia}})"
+  />
+  <img src="{{Src}}" alt="" srcset=", {{Src2}} 2x, {{Src3}} 3x" />
+</picture>

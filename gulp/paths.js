@@ -40,10 +40,10 @@ const folder = {
 
 const files = {
     src: folder.src + "/**/*.*",
-    srcImgs: folder.srcImgs + "/**/*.{jpg, jpeg, png}",
+    srcImgs: folder.srcImgs + "/**/*.{jpg,jpeg,png}",
     srcSvg: folder.srcImgs + "/**/*.svg",
     srcFonts: folder.srcFonts + "/**/*.*",
-    srcHtml: folder.srcHtml + "/**/*.*",
+    srcHtml: folder.srcHtml + "/*.*",
     srcScss: folder.srcScss + "/**/*.*",
     srcJs: folder.srcJs + "/**/*.*",
     build: folder.build + "/**/*.*",

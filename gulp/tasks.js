@@ -65,9 +65,6 @@ function images(done) {
         message: "Error: <%= error.message %>"
       })
     ))
-    .pipe(gulp.src(paths.files.srcSvg))
-    .pipe(newer(paths.folder.buildImgs))
-    .pipe(gulp.dest(paths.folder.buildImgs))
     .pipe(newer(paths.folder.buildImgs))
     .pipe(webp({
       quality: 90
@@ -81,9 +78,10 @@ function images(done) {
     ])
 
     )
-
     .pipe(gulp.dest(paths.folder.buildImgs))
-
+    .pipe(gulp.src(paths.files.srcSvg))
+    .pipe(newer(paths.folder.buildImgs))
+    .pipe(gulp.dest(paths.folder.buildImgs))
 
   done()
 }

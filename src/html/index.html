@@ -1,125 +1,273 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.min.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="main-header">
-      <nav class="main-header__nav main-header__nav--">
-        <a href="#" class="main-header__logo">
-          <include src="src/img/icons/logo-copy.svg">
-            {
-              "width": "68",
-              "height": "35"
-            }
-          </include>
-        </a>
-        <ul class="main-header__site-nav site-nav">
-          <li class="site-nav__item">
-            <a href="#" class="site-nav__link"></a>
-          </li>
-        </ul>
-        <ul class="user-navigation">
-          <li class="user-navigation__item">
-            <a
-              href="#"
-              class="user-navigation__link user-navigation__link--search icon icon --search"
-              >Поиск по сайту</a
-            >
-          </li>
-          <li class="user-navigation__item">
-            <a
-              href="#"
-              class="user-navigation__link user-navigation__link--cart icon icon--cart"
-              >Корзина: пока пуста</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <button class="main-header__button main-header__button--"></button>
-    </header>
-    <main class="main-page">
-      <h1 class="visually-hidden">Главная страница сайта магазина Мишка</h1>
-      <section class="catalog">
-        <h2 class="catalog__title">Каталог товаров</h2>
-        <ul class="catalog__list">
-          <li class="catalog__item">
-            <h3 class="catalog__item-title"></h3>
-            <p class="catalog__text"></p>
-            <p class="catalog__price"></p>
-            <button class="catalog__button icon"></button>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <footer class="main-footer">
-      <ul class="main-footer__socials socials">
-        <li class="socials__item">
-          <a href="#" class="socials__link socials__link--">
-            Инстаграмм
-            <svg
-              width="22"
-              height="21"
-              class="main-footer__html-icon"
-              aria-hidden="true"
-              role="presentation"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use xlink:href="@img/icons/sprite.svg#inst"></use>
-            </svg>
-          </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="main-header__nav main-header__nav--">
+      <a href="#" class="main-header__logo">
+        <include src="src/img/icons/logo-copy.svg">
+          { "width": "68", "height": "35" }
+        </include>
+      </a>
+      <ul class="main-header__site-nav site-nav">
+        <li class="site-nav__item">
+          <a href="#" class="site-nav__link">Каталог товаров</a>
         </li>
-        <li class="socials__item">
-          <a href="#" class="socials__link socials__link--">
-            <span class="visually-hidden">Фейсбук</span>
-            <svg
-              width="15"
-              height="28"
-              class="main-footer__html-icon"
-              aria-hidden="true"
-              role="presentation"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use xlink:href="@img/icons/sprite.svg#fb"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a href="#" class="socials__link socials__link--">
-            <span class="visually-hidden">Твитер</span>
-            <svg
-              width="23"
-              height="20"
-              class="main-footer__html-icon"
-              aria-hidden="true"
-              role="presentation"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use xlink:href="@img/icons/sprite.svg#tw"></use>
-            </svg>
-          </a>
+        <li class="site-nav__item">
+          <a href="#" class="site-nav__link">Вязание на заказ</a>
         </li>
       </ul>
-      <p class="main-footer__copyright">
-        Разработано
-        <a class="main-footer__html-link" href="#">
-          <span class="visually-hidden">HTMl Acadamy</span>
-          <svg
-            width="27"
-            height="34"
-            class="main-footer__html-icon"
-            aria-hidden="true"
-            role="presentation"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use xlink:href="@img/icons/sprite.svg#html"></use>
+      <ul class="user-navigation">
+        <li class="user-navigation__item">
+          <a href="#" class="user-navigation__link user-navigation__link--search icon icon --search">Поиск по сайту</a>
+        </li>
+        <li class="user-navigation__item">
+          <a href="#" class="user-navigation__link user-navigation__link--cart icon icon--cart">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="main-header__button main-header__button--"></button>
+  </header>
+  <main class="main-page">
+    <h1 class="visually-hidden">Главная страница сайта магазина Мишка</h1>
+    <section class="promo">
+      <header class="promo__header">
+        <h2 class="promo__title">Милые штуки ручной работы для дома</h2>
+        <ul class="promo__header-links">
+          <li class="promo__header-link-wrapper">
+            <a class="promo__header-link" href="#">Новые поступления</a>
+          </li>
+          <li class="promo__header-link-wrapper">
+            <a class="promo__header-link" href="#">Распродажа</a>
+          </li>
+          <li class="promo__header-link-wrapper">
+            <a class="promo__header-link" href="#">Бесплатная доставка по России</a>
+          </li>
+        </ul>
+      </header>
+      <p class="promo__img">
+        <picture>
+          <!-- <source
+              srcset="@img/"
+              media="(max-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="@img/"
+              media="(max-width: 768px)"
+              type="image/webp"
+            /> -->
+          <source srcset="@img/hero-mobile.webp" type="image/webp" />
+          <source srcset="" media="(min-width: 1200px)" />
+          <source srcset="" media="(min-width: 768px)" />
+          <img src="@img/hero-mobile.jpg" alt="" srcset="@img/hero-mobile@2x.jpg 2x, @img/hero-mobile@3x.jpg 3x" />
+        </picture>
+      </p>
+      <footer class="promo__footer">
+        <ul class="promo__bottom-navigation">
+          <a href="#" class="promo__bottom-navigation-link promo__bottom-navigation-link--left">
+            <li class="promo__bottom-navigation-item">
+              Предметы интерьера
+            </li>
+          </a>
+          <a href="#" class="promo__bottom-navigation-link promo__bottom-navigation-link--right">
+            <li class="promo__bottom-navigation-item">
+              Детские игрушки
+            </li>
+          </a>
+        </ul>
+      </footer>
+    </section>
+    <section class="week-product">
+      <h2 class="week-product__title">
+        ТОВАР НЕДЕЛИ
+      </h2>
+      <article class="week-product__product">
+        <h3 class="week-product__name">Вязаные корзинки</h3>
+        <p class="week-product__text">
+          Экологически чистая пряжа, ручная работа. Доступны в шести
+          расцветках, и трех размерах.
+        </p>
+        <dl class="week-product__params">
+          <div class="week-product__param-wrapper">
+            <dt class="week_product__param"> Цвет:</dt>
+            <dd class="week-product__param-text">«Тиффани»/серый</dd>
+          </div>
+          <div class="week-product__param-wrapper">
+            <dt class="week_product__param"> Диаметр:</dt>
+            <dd class="week-product__param-text"> 25 см</dd>
+          </div>
+          <div class="week-product__param-wrapper">
+            <dt class="week_product__param"> Высота:</dt>
+            <dd class="week-product__param-text"> 15 см</dd>
+          </div>
+        </dl>
+        <include src="src/html/snippets/picture.html">
+          {"descktopMedia": "1050px",
+          "tabletMedia": "768px",
+          "descktopSrcWebp": "@img/triple-set-mobile.webp",
+          "descktopSrcWebp2": "",
+          "descktopSrcWebp3": "",
+          "tabletSrcWebp": "",
+          "tabletSrcWebp2": "",
+          "tabletSrcWebp3": "",
+          "SrcWebp": "",
+          "SrcWebp2": "",
+          "SrcWebp3": "",
+          "descktopSrc": "",
+          "descktopSrc2": "",
+          "descktopSrc3": "",
+          "tabletSrc": "",
+          "tabletSrc2": "",
+          "tabletSrc3": "",
+          "Src": "@img/triple-set-mobile.jpg",
+          "Src2": "",
+          "Src3": ""}
+        </include>
+        <p class="week-product__price">Цена: 990 руб.</p>
+        <a class="week-product__link btn" href="#">ЗАКАЗАТЬ</a>
+      </article>
+    </section>
+    <section class="about">
+      <h2 class="about__title">Коротко о нас:</h2>
+      <ul class="about__list">
+        <li class="about__item about__item--">
+          Экологически чистые материалы
+        </li>
+
+        <li class="about__item about__item--">
+          Скандинавский стиль по российской цене
+        </li>
+        <li class="about__item about__item--">
+          Увеличивает лайки на фотографиях
+        </li>
+        <li class="about__item about__item--">
+          Связано вручную с любовью и умилением
+        </li>
+        <li class="about__item about__item--">
+          Поддержка отечественного производителя
+        </li>
+        <li class="about__item about__item--">
+          Поставляется в подарочной упаковке
+        </li>
+      </ul>
+    </section>
+    <section class="reviews">
+      <h2 class="reviews__title">
+        Отзывы
+      </h2>
+      <blockquote class="reviews__quote-wrapper">
+        <p class="reviews__text">
+          Я молодая мама, но всё равно фотографии не набирали и близко такого
+          количества лайков, как у популярных инстамамочек. В отчаянии, я
+          накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали
+          более стильными, а также набирают больше лайков!
+        </p>
+        <footer class="reviews__footer">
+          <cite class="reviews__author"> Анастасия Красильникова </cite>
+          <p class="reviews__mail">@misssssiskras</p>
+        </footer>
+      </blockquote>
+      <div class="reviews__buttons">
+        <button class="reviews__btn">
+          <span class="visually-hidden">Назад</span>
+        </button>
+        <button class="reviews__btn">
+          <span class="visually-hidden">Вперед</span>
+        </button>
+      </div>
+      <a href="#" class="reviews__link"></a>
+    </section>
+    <section class="contacts">
+      <h2 class="contacts__title">Контакты</h2>
+      <dl class="contacts__list">
+        <div class="contacts__item-wrapper">
+          <dt class="contacts__name"> адрес:</dt>
+          <dd class="contatcs__text">г. Санкт-Петербург,
+            ул. Большая Конюшенная,
+            д. 19/8, офис 101</dd>
+        </div>
+        <div class="contacts__item-wrapper">
+          <dt class="contacts__name">e-mail:</dt>
+          <dd class="contatcs__text">
+            <a href="mailto:info@mimimishkashop.ru" class="contacts__link">info@mimimishkashop.ru</a>
+          </dd>
+        </div>
+      </dl>
+      <include src='src/html/snippets/picture.html'>
+        {"descktopMedia": "1050px",
+        "tabletMedia": "768px",
+        "descktopSrcWebp": "@img/map-mobile@1x.webp",
+        "descktopSrcWebp2": "",
+        "descktopSrcWebp3": "",
+        "tabletSrcWebp": "",
+        "tabletSrcWebp2": "",
+        "tabletSrcWebp3": "",
+        "SrcWebp": "",
+        "SrcWebp2": "",
+        "SrcWebp3": "",
+        "descktopSrc": "",
+        "descktopSrc2": "",
+        "descktopSrc3": "",
+        "tabletSrc": "",
+        "tabletSrc2": "",
+        "tabletSrc3": "",
+        "Src": "@img/map-mobile@1x.png",
+        "Src2": "",
+        "Src3": ""}
+      </include>
+      <a class="contacts__link btn" href="#">Напишите нам</a>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <ul class="main-footer__socials socials">
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--">
+          Инстаграмм
+          <svg width="22" height="21" class="main-footer__html-icon" aria-hidden="true" role="presentation"
+            xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="@img/icons/sprite.svg#inst"></use>
           </svg>
         </a>
-      </p>
-    </footer>
-  </body>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--">
+          <span class="visually-hidden">Фейсбук</span>
+          <svg width="15" height="28" class="main-footer__html-icon" aria-hidden="true" role="presentation"
+            xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="@img/icons/sprite.svg#fb"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link socials__link--">
+          <span class="visually-hidden">Твитер</span>
+          <svg width="23" height="20" class="main-footer__html-icon" aria-hidden="true" role="presentation"
+            xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="@img/icons/sprite.svg#tw"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <p class="main-footer__copyright">
+      Разработано
+      <a class="main-footer__html-link" href="#">
+        <span class="visually-hidden">HTMl Acadamy</span>
+        <svg width="27" height="34" class="main-footer__html-icon" aria-hidden="true" role="presentation"
+          xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="@img/icons/sprite.svg#html"></use>
+        </svg>
+      </a>
+    </p>
+  </footer>
+</body>
+
 </html>
