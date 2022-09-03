@@ -1,4 +1,5 @@
 .container {
+  box-sizing: border-box;
   width: 320px;
   margin: 0 auto;
   &--tablet {
@@ -22,39 +23,6 @@
   clip-path: inset(100%);
 }
 
-.site-nav {
-  @include listNone;
-}
-
-.title {
-  &::before {
-    counter-increment: title;
-    content: "0" counter(title);
-  }
-
-  &::after {
-    width: 81px;
-    height: 2px;
-    content: "";
-    background-color: #06a9b3;
-    grid-column: 2 / span 1;
-    grid-row: 1;
-  }
-
-  &--center {
-    &::before {
-      position: absolute;
-      top: calc(50% + 33px);
-      left: 50%;
-      width: 86px;
-      height: 2px;
-      content: "";
-      transform: translateX(-50%);
-      background-color: #fff;
-    }
-  }
-}
-
 .border {
   position: relative;
   &::before {
@@ -67,10 +35,40 @@
   }
 }
 
-.socials {
-  display: grid;
-  align-items: start;
+.site-nav {
+  @include listNone;
 
+  &__item {
+    box-shadow: 0px 1px 0 0 #ececec, inset 0px 1px 0 0 #ececec;
+  }
+
+  &__link {
+    padding: 30px 10px;
+    display: block;
+    margin-left: 75px;
+  }
+}
+.user-navigation {
+  @include listNone;
+
+  &__item {
+    box-shadow: 0px 1px 0 0 #ececec, inset 0px 1px 0 0 #ececec;
+  }
+
+  &__link {
+    display: block;
+    padding: 30px 10px;
+    margin-left: 33px;
+  }
+
+  &__link--search {
+  }
+
+  &__link--cart {
+  }
+}
+
+.socials {
   @include listNone;
 
   &__item {
@@ -102,6 +100,32 @@
 
 .btn {
   display: inline-block;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+
+  svg {
+    opacity: 0.2;
+    margin-right: 25px;
+
+    &:hover {
+      opacity: 1;
+      fill: #63d1bb;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--search {
+  }
+  &--cart {
+    svg {
+      margin-right: 23px;
+    }
+  }
 }
 
 .break {

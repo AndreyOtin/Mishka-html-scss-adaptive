@@ -1,0 +1,118 @@
+.promo {
+  background-image: linear-gradient(180deg, #f9f9f9 373px, #fff 373px);
+
+  &__wrapper {
+    padding-top: 73px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__header {
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 130px;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    color: #010000;
+    z-index: 2;
+  }
+
+  &__header-links {
+    display: none;
+  }
+
+  &__header-link-wrapper {
+  }
+
+  &__header-link {
+  }
+
+  &__img {
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -18px;
+    left: 0;
+  }
+
+  &__footer {
+  }
+
+  &__bottom-navigation {
+    z-index: 2;
+    @include listNone;
+    font-size: 19px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  &__bottom-navigation-item {
+  }
+
+  &__bottom-navigation-link {
+    display: block;
+    padding: 30px 200px 30px 30px;
+    position: relative;
+    transition: padding 0.2s ease-in;
+
+    &:active::after {
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: rgba(#fff, 0.3);
+    }
+
+    &:hover {
+      padding-top: 25px;
+      padding-bottom: 40px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      transition: top 0.2s ease-in;
+    }
+  }
+
+  &__bottom-navigation-link--left {
+    background-color: #63d1bb;
+
+    &:hover::after {
+      top: 18px;
+    }
+
+    &::after {
+      width: 40px;
+      height: 62px;
+      top: 23px;
+      right: 36px;
+      background: url(../img/lustra.png) no-repeat center;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background: url(../img/interior.svg@2x.png) no-repeat center/40px auto;
+      }
+    }
+  }
+
+  &__bottom-navigation-link--right {
+    background-color: #56c3b2;
+    &:hover::after {
+      top: 16px;
+    }
+    &::after {
+      width: 60px;
+      height: 60px;
+      top: 21px;
+      right: 27px;
+      background: url(../img/kubik.png) no-repeat center;
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background: url(../img/toy-svg@2x.png) no-repeat center/60px auto;
+      }
+    }
+  }
+}

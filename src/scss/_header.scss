@@ -1,11 +1,68 @@
-.main-header__logo {
-  .svglayer {
-    fill: red;
+.main-header {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #000;
+
+  &__nav {
+    position: relative;
   }
-  .svglayer-1 {
-    fill: white;
+
+  &__nav--open {
+    .main-header__button {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 21px;
+      height: 21px;
+      &::after,
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        content: "";
+        width: 21px;
+        height: 2px;
+        background-color: #000;
+             }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
   }
-  .svglayer-2 {
-    fill: white;
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    width: 86px;
+    padding: 20px 0;
+
+    svg {
+    }
+    .bg {
+      fill: none;
+    }
+
+    .words {
+      fill: #000;
+    }
+
+    .line {
+    }
+  }
+
+  &__site-nav {
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__button-- {
   }
 }

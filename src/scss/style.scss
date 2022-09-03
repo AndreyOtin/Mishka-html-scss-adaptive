@@ -3,6 +3,7 @@
 @import "often-used";
 @import "blocks";
 @import "header";
+@import "promo";
 // @import "page";
 // @import 'payment';
 // @import 'tickets';
@@ -10,7 +11,7 @@
 // @import 'search';
 // @import 'main-nav';
 // @import "tickets";
-// @import "promo";
+
 // @import "about";
 // @import "park";
 // @import "catalog";
@@ -31,21 +32,12 @@
 
 body {
   margin: 0;
-  padding: 0 0px;
+  padding: 0;
   min-width: 320px;
 
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 32px;
-
-  min-width: 1920px;
-  // background: #e5e5e5;
-  // color: #695a59;
-  // min-height: 100vh;
-}
-
-.main-footer__html-icon {
-    fill: red;
+  font-family: 'Open Sans', sans-serif;;
+  font-size: 15px;
+  line-height: 24px;
+  color: #444;
+  background-color: #fff;
 }
