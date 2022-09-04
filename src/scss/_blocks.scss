@@ -2,9 +2,11 @@
   box-sizing: border-box;
   width: 320px;
   margin: 0 auto;
+
   &--tablet {
     width: $tablet-width;
   }
+
   &--desctop {
     width: $desktop-width;
   }
@@ -25,13 +27,14 @@
 
 .border {
   position: relative;
+
   &::before {
     position: absolute;
     top: 22px;
     left: 27px;
     width: 100%;
-    content: "";
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    content: '';
+    border: 1px solid rgba(255, 255, 255, .2);
   }
 }
 
@@ -39,39 +42,39 @@
   @include listNone;
 
   &__item {
-    box-shadow: 0px 1px 0 0 #ececec, inset 0px 1px 0 0 #ececec;
+    box-shadow: inset 0 1px 0 0 #ececec;
   }
 
   &__link {
-    padding: 30px 10px;
     display: block;
     margin-left: 75px;
+    padding: 30px 10px;
   }
 }
+
 .user-navigation {
   @include listNone;
 
   &__item {
-    box-shadow: 0px 1px 0 0 #ececec, inset 0px 1px 0 0 #ececec;
+    box-shadow: inset 0 1px 0 0 #ececec;
   }
 
   &__link {
     display: block;
-    padding: 30px 10px;
     margin-left: 33px;
-  }
-
-  &__link--search {
-  }
-
-  &__link--cart {
+    padding: 30px 10px;
   }
 }
 
 .socials {
   @include listNone;
+  @include flexWrap;
+  justify-content: center;
+  align-items: center;
 
   &__item {
+    margin-right: 40px;
+
     &:last-child {
       margin-right: 0;
     }
@@ -79,48 +82,74 @@
 
   &__link {
     display: block;
+
+    svg {
+      &:hover {
+        fill: #46c1ae;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
   }
 
   &__link--f {
-    background: url("../img/f.png") no-repeat center;
+    background: url('../img/f.png') no-repeat center;
   }
+
   &__link--v {
-    background: url("../img/v.png") no-repeat center;
+    background: url('../img/v.png') no-repeat center;
   }
+
   &__link--w {
-    background: url("../img/whatsapp.svg") no-repeat center;
+    background: url('../img/whatsapp.svg') no-repeat center;
   }
+
   &__link--i {
-    background: url("../img/i.png") no-repeat center;
+    background: url('../img/i.png') no-repeat center;
   }
+
   &__link--t {
-    background: url("../img/Twitter.svg") no-repeat center;
+    background: url('../img/Twitter.svg') no-repeat center;
   }
 }
 
 .btn {
-  display: inline-block;
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  box-sizing: border-box;
+  width: 260px;
+  padding: 16px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #444;
+  border: solid 2px #444;
 }
+
 
 .icon {
   display: flex;
   align-items: center;
 
   svg {
-    opacity: 0.2;
     margin-right: 25px;
+
+    opacity: .2;
 
     &:hover {
       opacity: 1;
       fill: #63d1bb;
     }
+
     &:active {
-      opacity: 0.3;
+      opacity: .3;
     }
   }
 
-  &--search {
-  }
+
   &--cart {
     svg {
       margin-right: 23px;

@@ -1,77 +1,40 @@
 .contacts {
-  position: relative;
-  &__map {
+
+  &__wrapper {
+    padding: 30px;
   }
 
   &__title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #000;
+  }
+
+  &__list {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  &__item-wrapper {
+    display: flex;
+
+  }
+
+  &__name {
+    margin-right: 30px;
+  }
+
+  &__text {
     margin: 0;
-    margin: 0 auto;
-    text-transform: uppercase;
-    font-family: Raleway;
-    font-size: 25px;
-    font-weight: 900;
-    line-height: 50px;
-    letter-spacing: 1px;
-    text-align: left;
-    color: #000;
+  }
+  &__picture{
+    margin-bottom: 40px;
+    margin-right: -30px;
+    margin-left: -30px;
   }
 
-  &__form {
-  }
-
-  &__input-wrapper {
-  }
-
-  &__input-wrapper--half {
-    width: 45%;
-  }
-
-  &__input-wrapper--full {
-    width: 100%;
-  }
-}
-.form {
-  background-color: #fff;
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  margin: 0 auto;
-  @include flexWrap;
-  justify-content: space-between;
-  width: 580px;
-  min-height: 580px;
-  padding: 50px 105px 50px 75px;
-  transform: translateX(-50%);
-
-  &__label {
-    display: block;
-    font-size: 20px;
-    line-height: 50px;
-    letter-spacing: 0.8px;
-    text-align: left;
-    color: #000;
-  }
-  input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid black;
-    width: 100%;
-    &:focus{
-      outline: none;
-      background-color: rgba(#666666, 0.05);
-    }
-
-  }
-  button{
-    margin: 0 auto;
-    background-color: black;
-    color: white;
-    width: 230px;
-  }
-  small {
-    font-size: 12px;
-    line-height: 18px;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.5);
+  &__link {
+    margin-bottom: 10px;
   }
 }

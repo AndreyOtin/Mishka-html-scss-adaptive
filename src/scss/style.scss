@@ -4,6 +4,13 @@
 @import "blocks";
 @import "header";
 @import "promo";
+@import "week-product";
+@import "about";
+@import "reviews";
+@import "contacts";
+@import "footer";
+
+
 // @import "page";
 // @import 'payment';
 // @import 'tickets';
@@ -12,8 +19,8 @@
 // @import 'main-nav';
 // @import "tickets";
 
-// @import "about";
-// @import "park";
+
+
 // @import "catalog";
 // @import "achiev";
 // @import "mission";
@@ -24,19 +31,20 @@
 
 // @import "services";
 // @import "galary";
-// @import "reviews";
+
 // @import "gifts";
 // @import "projects";
-// @import "contacts";
-// @import "footer";
+
+
 
 body {
   margin: 0;
   padding: 0;
   min-width: 320px;
 
-  font-family: 'Open Sans', sans-serif;;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+  font-weight: normal;
   line-height: 24px;
   color: #444;
   background-color: #fff;

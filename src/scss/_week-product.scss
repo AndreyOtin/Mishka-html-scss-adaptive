@@ -1,0 +1,86 @@
+.week-product {
+    background: url(../img/icons/ziggrey2.svg) repeat-x bottom/6px;
+
+  &__wrapper {
+    display: grid;
+
+    box-sizing: border-box;
+    padding: 30px;
+    grid-template-columns: 260px;
+
+  }
+
+  &__title {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+
+    margin: 0;
+    margin-top: 30px;
+    color: #63d1bb;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  &__product {
+    grid-row: 1/-1;
+    grid-column: 1/2;
+  }
+
+  &__name {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 30px;
+
+    margin: 0;
+    margin-bottom: 50px;
+    color: #000;
+  }
+  &__img {
+    width: 280px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 15px;
+
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__params {
+    font-size: 15px;
+    line-height: 20px;
+
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  &__param-wrapper {
+    display: grid;
+    padding: 10px 0;
+
+    box-shadow: 0 1px 0 0 #ececec;
+    grid-template-columns: 55px 1fr;
+    column-gap: 30px;
+  }
+
+  &__param-text {
+    margin: 0;
+  }
+
+  &__price {
+    font-size: 17px;
+    font-weight: bold;
+
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 15px;
+
+  }
+}
