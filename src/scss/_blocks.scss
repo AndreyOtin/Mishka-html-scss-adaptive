@@ -40,6 +40,7 @@
 
 .site-nav {
   @include listNone;
+  background-color: #fff;
 
   &__item {
     box-shadow: inset 0 1px 0 0 #ececec;
@@ -49,12 +50,20 @@
     display: block;
     margin-left: 75px;
     padding: 30px 10px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
 .user-navigation {
   @include listNone;
-
+  background-color: #fff;
   &__item {
     box-shadow: inset 0 1px 0 0 #ececec;
   }
@@ -63,6 +72,28 @@
     display: block;
     margin-left: 33px;
     padding: 30px 10px;
+
+    &:hover {
+      color: rgba(#444, 0.6);
+    }
+
+    &:active {
+      color: rgba(#444, 0.3);
+    }
+
+    &:hover {
+      svg {
+        opacity: 1;
+        fill: #63d1bb;
+      }
+
+    }
+
+    &:active {
+      svg {
+        opacity: .3;
+      }
+    }
   }
 }
 
@@ -127,6 +158,18 @@
   text-transform: uppercase;
   color: #444;
   border: solid 2px #444;
+
+  &:hover {
+
+    color: #fff;
+    background-color: #000;
+  }
+
+  &:active {
+
+    color: rgba(#fff, 0.3);
+
+  }
 }
 
 
@@ -139,14 +182,6 @@
 
     opacity: .2;
 
-    &:hover {
-      opacity: 1;
-      fill: #63d1bb;
-    }
-
-    &:active {
-      opacity: .3;
-    }
   }
 
 

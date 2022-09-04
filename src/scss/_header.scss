@@ -6,15 +6,12 @@
 
   &__nav {
     position: relative;
+    min-height: 410px;
   }
 
   &__nav--open {
     .main-header__button {
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      width: 21px;
-      height: 21px;
+
       &::after,
       &::before {
         position: absolute;
@@ -24,13 +21,34 @@
         width: 21px;
         height: 2px;
         background-color: #000;
-             }
+      }
+
       &::before {
         transform: rotate(45deg);
       }
+
       &::after {
         transform: rotate(-45deg);
       }
+    }
+    .main-header__dropout{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+      width: 100%;
+    }
+  }
+
+  &__nav--closed {
+    .main-header__button {
+      height: 14px;
+      top: 32px;
+      background-image: linear-gradient(180deg, black 2px, white 2px, white 6px, black 6px, black 8px, white 8px, white 12px, black 12px);
+    }
+
+    .site-nav, .user-navigation{
+      display: none;
     }
   }
 
@@ -41,8 +59,23 @@
     width: 86px;
     padding: 20px 0;
 
-    svg {
+    &:hover {
+
+      .words,
+      .line {
+        fill: #46c1ae;
+      }
     }
+
+    &:active {
+
+      .line,
+      .words {
+        opacity: 0.3;
+      }
+
+    }
+
     .bg {
       fill: none;
     }
@@ -51,18 +84,20 @@
       fill: #000;
     }
 
-    .line {
-    }
+    .line {}
   }
 
-  &__site-nav {
-  }
+  &__site-nav {}
 
   &__button {
     background-color: transparent;
     border: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 21px;
+    height: 21px;
   }
 
-  &__button-- {
-  }
+  &__button-- {}
 }

@@ -23,12 +23,15 @@
 
   &__name {
     margin-right: 30px;
+
   }
+
 
   &__text {
     margin: 0;
   }
-  &__picture{
+
+  &__picture {
     margin-bottom: 40px;
     margin-right: -30px;
     margin-left: -30px;
@@ -36,5 +39,13 @@
 
   &__link {
     margin-bottom: 10px;
+
+    &:hover {
+      color: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
