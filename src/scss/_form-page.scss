@@ -1,0 +1,348 @@
+.form-page {
+
+
+
+    .main-header {}
+
+    .main-header__nav {}
+
+    .main-header__nav--open {
+        min-height: 85px;
+
+        .user-navigation__item {
+            display: none;
+        }
+
+        .user-navigation__item--active {
+            display: block;
+        }
+
+        .main-header__logo {
+            display: none;
+        }
+
+        .main-header__site-nav {
+            display: none;
+        }
+
+        .main-header__dropout {}
+
+        .site-nav {}
+
+        .site-nav__item {}
+
+        .site-nav__link {}
+
+        .main-header__user-nav {}
+
+        .user-navigation {}
+
+        .user-navigation__link {}
+
+        .user-navigation__link--search {}
+
+        .icon {}
+
+        .icon--search {}
+
+        .user-navigation__link--cart {}
+
+        .icon--cart {}
+
+        .main-header__button {}
+
+        .main-header__button-- {}
+    }
+
+
+
+
+    &__title {
+        margin: 0;
+        margin-bottom: 30px;
+        padding-top: 75px;
+        padding-bottom: 75px;
+        font-size: 27px;
+        font-weight: bold;
+        line-height: 30px;
+        text-align: center;
+        color: #231f20;
+        background-color: #f1f1f1;
+
+    }
+
+    &__text {
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 13px;
+    }
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form {
+    padding-bottom: 30px;
+
+
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+
+    &__type-group {
+        margin-bottom: 25px;
+    }
+
+    &__color-group {
+        margin-bottom: 25px;
+    }
+
+    &__name-group {
+        margin-bottom: 25px;
+    }
+
+    &__group-title {
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+
+    &__wrapper {
+        position: relative;
+        margin-bottom: 20px;
+
+
+        &--tel {}
+    }
+
+
+    &__label {
+        user-select: none;
+        display: grid;
+        grid-template-columns: 60px 165px;
+        grid-template-rows: 40px;
+        grid-auto-flow: dense;
+        align-items: center;
+
+        &::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 10px solid #fff;
+            box-shadow: 0 0 0 2px #444;
+        }
+
+        &--color {
+            &::before {
+                border-radius: 0;
+                width: 40px;
+                height: 40px;
+                border: none;
+            }
+
+            &::after {
+                position: absolute;
+                top: 9px;
+                left: 7px;
+                content: unset;
+                width: 22px;
+                height: 11px;
+                border: 2px solid black;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                transform: rotate(-45deg);
+            }
+        }
+
+        &--name,
+        &--add,
+        &--email,
+        &--tel {
+
+
+            &::before {
+                content: unset;
+            }
+
+            &::after {
+
+                margin-left: 10px;
+            }
+        }
+
+
+        &--add,
+        &--email,
+        &--tel {
+            text-transform: uppercase;
+        }
+
+        &--email {
+
+
+            &::after {
+
+                margin-left: 22px;
+            }
+
+        }
+
+
+
+    }
+
+    &__icon {
+        position: absolute;
+        right: 8px;
+        bottom: 15px;
+        opacity: 0.2;
+
+        &--mail {
+            bottom: 10px;
+        }
+    }
+
+    &__input {
+
+        grid-column: 1;
+
+        &--name,
+        &--email,
+        &--tel {
+            box-sizing: border-box;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #444;
+            padding: 10px 40px 15px 0;
+            font-weight: normal;
+            outline: none;
+            line-height: normal;
+
+
+            &::placeholder {
+                opacity: 0.3;
+            }
+
+            &:focus,
+            &:hover {
+
+                border-bottom-color: #63d1bb;
+            }
+
+            &:focus+svg,
+            &:hover+svg {
+                fill: #63d1bb;
+                opacity: 1;
+            }
+        }
+
+        &--type {
+
+
+            &:focus+label::before {
+                box-shadow: 0 0 0 2px #62d1ba;
+
+            }
+
+            &:checked+label::before {
+                background-color: #62d1ba;
+                box-shadow: 0 0 0 2px #444;
+            }
+
+            &:hover+label::before {
+                box-shadow: 0 0 0 2px #62d1ba;
+
+            }
+
+            &:active+label::before {
+                box-shadow: 0 0 0 2px rgba(#000, 0.3);
+                background-color: #62d1ba;
+            }
+        }
+
+        &--color {
+
+
+
+            &:checked+label::after {
+                content: "";
+            }
+
+            &:checked+label::before {
+                content: "";
+
+
+            }
+
+            &:focus+label::before {
+                box-shadow: 0 0 0 2px #62d1ba;
+
+            }
+
+
+            &:hover+label::before {
+                box-shadow: 0 0 0 2px #62d1ba;
+
+            }
+
+            &:active+label::before {
+                box-shadow: 0 0 0 2px rgba(#000, 0.3);
+
+            }
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: normal;
+    }
+
+
+    &__button {
+
+        margin-bottom: 15px;
+    }
+
+    &__textarea {
+        width: 100%;
+
+        &::placeholder {
+            font-size: 17px;
+            line-height: 18px;
+
+            color: rgba(68, 68, 68, 0.3);
+        }
+
+        &:focus, &:hover{
+            outline: none;
+            border-color: #62d1ba;
+        }
+    }
+}
+
+.line-title {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 16px;
+    color: #63d1bb;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+
+    &::after {
+        content: "";
+
+        height: 2px;
+        background-color: #63d1bb;
+
+    }
+}
+
+.btn {}

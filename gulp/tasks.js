@@ -35,6 +35,7 @@ export default {
 function del(done) {
   deleteSync(paths.folder.build)
   done()
+
 }
 
 function watcher() {
@@ -57,8 +58,8 @@ function server() {
 
 // TODO IMAGES ///
 
-function images(done) {
-  gulp.src(paths.files.srcImgs)
+function images() {
+ return gulp.src(paths.files.srcImgs)
     .pipe(plumber(
       notify.onError({
         title: "HTML",
@@ -83,7 +84,7 @@ function images(done) {
     .pipe(newer(paths.folder.buildImgs))
     .pipe(gulp.dest(paths.folder.buildImgs))
     .pipe(browserSync.stream())
-  done()
+
 }
 
 

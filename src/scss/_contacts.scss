@@ -33,8 +33,11 @@
 
   &__picture {
     margin-bottom: 40px;
-    margin-right: -30px;
-    margin-left: -30px;
+    position: relative;
+    width: 320px;
+    left: -30px;
+
+
   }
 
   &__link {

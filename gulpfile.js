@@ -5,7 +5,7 @@ import gulp from 'gulp';
 
 
 
-const mainTasks = gulp.parallel(tasks.html,tasks.scss, tasks.images)
+const mainTasks = gulp.series(tasks.images,gulp.parallel(tasks.html,tasks.scss))
 
 gulp.task("svg", tasks.svgM)
 

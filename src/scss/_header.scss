@@ -6,10 +6,24 @@
 
   &__nav {
     position: relative;
-    min-height: 410px;
+
   }
 
+  &__button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 21px;
+    height: 21px;
+  }
+
+// * Меню открыто, переопределяю стили за коскадом
+
   &__nav--open {
+    min-height: 410px;
+
     .main-header__button {
 
       &::after,
@@ -31,7 +45,8 @@
         transform: rotate(-45deg);
       }
     }
-    .main-header__dropout{
+
+    .main-header__dropout {
       position: absolute;
       top: 0px;
       left: 0px;
@@ -40,14 +55,17 @@
     }
   }
 
+// * Меню закрыто, переопределяю стили за каскадом
+
   &__nav--closed {
     .main-header__button {
       height: 14px;
-      top: 32px;
+      top: 35px;
       background-image: linear-gradient(180deg, black 2px, white 2px, white 6px, black 6px, black 8px, white 8px, white 12px, black 12px);
     }
 
-    .site-nav, .user-navigation{
+    .site-nav,
+    .user-navigation {
       display: none;
     }
   }
@@ -89,15 +107,7 @@
 
   &__site-nav {}
 
-  &__button {
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 21px;
-    height: 21px;
-  }
+
 
   &__button-- {}
 }

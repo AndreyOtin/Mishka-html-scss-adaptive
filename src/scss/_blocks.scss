@@ -12,7 +12,7 @@
   }
 }
 
-.visually-hidden {
+.visually-hidden{
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -124,30 +124,11 @@
       }
     }
   }
-
-  &__link--f {
-    background: url('../img/f.png') no-repeat center;
-  }
-
-  &__link--v {
-    background: url('../img/v.png') no-repeat center;
-  }
-
-  &__link--w {
-    background: url('../img/whatsapp.svg') no-repeat center;
-  }
-
-  &__link--i {
-    background: url('../img/i.png') no-repeat center;
-  }
-
-  &__link--t {
-    background: url('../img/Twitter.svg') no-repeat center;
-  }
 }
 
 .btn {
   display: block;
+  background-color: transparent;
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
