@@ -59,7 +59,7 @@ function server() {
 // TODO IMAGES ///
 
 function images() {
- return gulp.src(paths.files.srcImgs)
+  return gulp.src(paths.files.srcImgs)
     .pipe(plumber(
       notify.onError({
         title: "HTML",
@@ -128,6 +128,7 @@ function scss() {
         cascade: true,
       }
     ))
+    .pipe(replace(/@img\//g, '../img/'))
     .pipe(gulp.dest(paths.folder.buildCss))
     .pipe(rename({
       extname: '.min.css'

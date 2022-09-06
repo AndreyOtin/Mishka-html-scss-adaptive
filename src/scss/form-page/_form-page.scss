@@ -1,6 +1,8 @@
 .form-page {
 
-
+    &__container {
+        padding: 30px;
+    }
 
     .main-header {}
 
@@ -60,14 +62,7 @@
     &__title {
         margin: 0;
         margin-bottom: 30px;
-        padding-top: 75px;
-        padding-bottom: 75px;
-        font-size: 27px;
-        font-weight: bold;
-        line-height: 30px;
-        text-align: center;
-        color: #231f20;
-        background-color: #f1f1f1;
+
 
     }
 
@@ -298,6 +293,8 @@ fieldset {
     }
 
     &__text {
+        margin: 0;
+        margin-bottom: 30px;
         font-size: 14px;
         line-height: 16px;
         font-weight: normal;
@@ -319,7 +316,8 @@ fieldset {
             color: rgba(68, 68, 68, 0.3);
         }
 
-        &:focus, &:hover{
+        &:focus,
+        &:hover {
             outline: none;
             border-color: #62d1ba;
         }
