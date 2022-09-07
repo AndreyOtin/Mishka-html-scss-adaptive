@@ -3,12 +3,12 @@
   width: 320px;
   margin: 0 auto;
 
-  &--tablet {
-    width: $tablet-width;
+  @media (min-width: $tablet-width) {
+    width: 768px;
   }
 
-  &--desctop {
-    width: $desktop-width;
+  @media (min-width: $desktop-width) {
+    width: 1150px;
   }
 }
 
@@ -25,6 +25,46 @@
   clip-path: inset(100%);
 }
 
+.icon {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+
+  svg {
+    &:hover {
+      opacity: 1;
+
+      fill: #46c1ae;
+    }
+
+    &:active {
+      opacity: .3;
+    }
+  }
+
+
+  svg {
+    margin-right: 25px;
+    opacity: .2;
+  }
+
+  &--cart {
+    svg {
+      margin-right: 23px;
+    }
+  }
+
+  &--catalog-cart {
+    margin: 0;
+    padding: 0;
+
+    svg {
+      margin-right: 0;
+    }
+  }
+}
+
 .border {
   position: relative;
 
@@ -39,12 +79,41 @@
 }
 
 .site-nav {
-  @include listNone;
   background-color: #fff;
+
+  @include listNone;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    order: 1;
+    width: 380px;
+    background-color: transparent;
+
+    @include flexWrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    order: -1;
+
+  }
 
   &__item {
     box-shadow: inset 0 1px 0 0 #ececec;
 
+
+
+    @media (min-width: $tablet-width) {
+      margin-right: 40px;
+
+      box-shadow: unset;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+
+    }
   }
 
   &__link {
@@ -52,19 +121,46 @@
     margin-left: 75px;
     padding: 30px 10px;
 
+    &--delivery {
+      display: none;
+    }
+
     &:hover {
-      opacity: 0.6;
+      opacity: .6;
     }
 
     &:active {
-      opacity: 0.3;
+      opacity: .3;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-left: 0;
+      padding-right: 0;
+      padding-left: 0;
+
+      &--delivery {
+        font-size: 15px;
+        font-weight: normal;
+
+        display: initial;
+        margin-left: auto;
+      }
     }
   }
 }
 
 .user-navigation {
-  @include listNone;
   background-color: #fff;
+
+  @include listNone;
+
+  @media (min-width: $tablet-width) {
+    @include flexWrap;
+  }
+
+  @media (min-width: $desktop-width) {
+
+  }
 
   &__item {
     box-shadow: inset 0 1px 0 0 #ececec;
@@ -76,7 +172,7 @@
     padding: 30px 10px;
 
     &:hover {
-      color: rgba(#444, 0.6);
+      color: rgba(#444, .6);
 
       svg {
         opacity: 1;
@@ -85,20 +181,50 @@
     }
 
     &:active {
-      color: rgba(#444, 0.3);
+      color: rgba(#444, .3);
 
       svg {
         opacity: .3;
       }
     }
-   }
+
+
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      padding-right: 0;
+      padding-left: 0;
+
+      &--search {
+        display: block;
+        text-align: center;
+
+        padding: 30px 30px;
+        border-left: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+        margin-right: 30px;
+
+        svg{
+          margin: 0;
+          vertical-align: baseline;
+        }
+
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 .socials {
-  @include listNone;
-  @include flexWrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  @include listNone;
+
+ display: flex;
 
   &__item {
     margin-right: 40px;
@@ -117,29 +243,30 @@
       }
 
       &:active {
-        opacity: 0.3;
+        opacity: .3;
       }
     }
   }
 }
 
 .title {
-  padding-top: 75px;
-  padding-bottom: 75px;
   font-size: 27px;
   font-weight: bold;
   line-height: 30px;
+
+  padding-top: 75px;
+  padding-bottom: 75px;
   text-align: center;
   color: #231f20;
   background-color: #f1f1f1;
 }
 
 .btn {
-  display: block;
-  background-color: transparent;
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
+
+  display: block;
   box-sizing: border-box;
   width: 260px;
   padding: 16px 10px;
@@ -147,65 +274,24 @@
   text-transform: uppercase;
   color: #444;
   border: solid 2px #444;
+  background-color: transparent;
 
   &--w190 {
     width: 190px;
   }
 
   &:hover {
-
     color: #fff;
     background-color: #000;
   }
 
   &:active {
-
-    color: rgba(#fff, 0.3);
-
+    color: rgba(#fff, .3);
   }
 }
 
 
-.icon {
-  display: flex;
-  align-items: center;
 
-  background-color: transparent;
-  border: none;
-
-  svg {
-    &:hover {
-      fill: #46c1ae;
-      opacity: 1;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-
-
-  svg {
-    margin-right: 25px;
-    opacity: .2;
-
-  }
-
-  &--cart {
-    svg {
-      margin-right: 23px;
-    }
-  }
-
-  &--catalog-cart {
-    padding: 0;
-    margin: 0;
-
-    svg {
-      margin-right: 0;
-    }
-  }
-}
 
 .break {
   flex-basis: 100%;

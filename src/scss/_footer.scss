@@ -3,8 +3,33 @@
 
   &__container {
     padding: 30px;
+    @media (min-width: $tablet-width) {
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
+  &__logo {
+    display: none;
+    @media (min-width: $tablet-width) {
+      display: block;
+      width: 150px;
+      height: 80px;
+
+
+      .bg {
+        display: none;
+      }
+      .ears{
+        display: none;
+      }
+      .line{
+        display: none;
+      }
+    }
+  }
 
 
   &__copyright {

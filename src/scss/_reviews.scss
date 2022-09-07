@@ -1,16 +1,53 @@
 .reviews {
   background: url(../img/icons/ziggrey2.svg) repeat-x bottom/6px;
 
+  @media (min-width: $tablet-width) {
+    background: url(../img/icons/ziggrey2.svg) repeat-x bottom/auto 17px, ;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 90px;
+    background: url(../img/icons/ziggrey2.svg) repeat-x bottom/auto 23px;
+  }
+
   &__wrapper {
     padding: 30px;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+
+      padding: 80px 50px 80px 50px;
+      background: url(../img/review.jpg) no-repeat top left;
+
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+        background: url('@img/review@2x.jpg') no-repeat top left/350px auto;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 225px;
+    }
   }
 
   &__title {
     font-size: 25px;
     font-weight: bold;
     line-height: 30px;
+
+    margin: 0;
+    margin-bottom: 30px;
     text-align: left;
-    color: #000
+    color: #000;
+
+    @media (min-width: $tablet-width) {
+      font-size: 43px;
+      font-weight: bold;
+      line-height: 50px;
+
+      margin: 0;
+      margin-bottom: 60px;
+    }
   }
 
   &__quote-wrapper {
@@ -18,58 +55,73 @@
   }
 
   &__text {
-    margin: 0;
-    margin-bottom: 35px;
     font-size: 15px;
     line-height: 30px;
+
+    margin: 0;
+    margin-bottom: 35px;
   }
 
-  &__footer {}
+
 
   &__author {
-
     font-size: 17px;
     font-weight: bold;
-
-
     color: #000;
   }
 
   &__mail {
+    line-height: 30px;
+
     margin: 0;
     margin-bottom: 35px;
-    line-height: 30px;
   }
 
   &__buttons {
     display: flex;
     margin-bottom: 35px;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      right: 0;
+      bottom: 120px;
+      width: 175px;
+      margin: 0;
+    }
   }
 
   &__btn {
     box-sizing: border-box;
-    border: none;
-    background-color: transparent;
-    width: 130px;
+    width: 50%;
     height: 52px;
+    border: none;
     border: 1px solid #ececec;
     background: url(../img/icons/arrow.svg) no-repeat center/50px 26px;
+    background-color: transparent;
 
     &--left {
       transform: scale(-1, 1);
       border-left-color: transparent;
     }
 
-    &:hover{
-      opacity: 0.6;
-    }
-    &:active{
-      opacity: 0.3;
+    &:hover {
+      opacity: .6;
     }
 
+    &:active {
+      opacity: .3;
+    }
   }
 
   &__link {
     margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 175px;
+      margin: 0;
+    }
   }
 }

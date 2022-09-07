@@ -41,7 +41,7 @@ function del(done) {
 function watcher() {
   gulp.watch(paths.folder.srcHtml, html)
   gulp.watch(paths.folder.srcScss, scss)
-  gulp.watch(paths.folder.srcImgs, images)
+  gulp.watch(paths.folder.srcImgs, gulp.series(images, html))
 }
 
 function server() {
@@ -162,7 +162,7 @@ function svg() {
 
 
 function svgM() {
-  return gulp.src(paths.folder.buildImgs + "/icons/logo.svg")
+  return gulp.src(paths.folder.buildImgs + "/icons/logo-copy.svg")
     .pipe(svgMin({
       full: true,
       plugins: [

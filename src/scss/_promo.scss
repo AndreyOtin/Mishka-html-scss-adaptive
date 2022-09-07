@@ -1,14 +1,55 @@
 .promo {
   background-image: linear-gradient(180deg, #f9f9f9 373px, #fff 373px);
+  position: relative;
+
+
+
+
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    background-color: #f9f9f9;
+  }
 
   &__wrapper {
     padding-top: 93px;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+
+    @media (min-width: $tablet-width) {
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 85px;
+      min-height: 590px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        height: 23px;
+        width: 100%;
+        background: transparent url(../img/icons/zigwhite.svg) no-repeat center/contain;
+        bottom: -12px;
+        left: 0;
+        z-index: 1;
+
+        @media (min-width: $desktop-width) {
+          background-size: 1150px auto;
+          height: 35px;
+          bottom: -20px;
+        }
+
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 30px;
+      min-height: 740px;
+    }
   }
 
-  &__header {
-  }
+
 
   &__title {
     position: relative;
@@ -19,17 +60,84 @@
     line-height: 30px;
     text-align: center;
     color: #010000;
-    z-index: 2;
+    z-index: 1;
+
+    @media (min-width: $tablet-width) {
+      font-size: 43px;
+      line-height: 50px;
+      color: #000;
+
+      br {
+        display: none;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+
   }
 
   &__header-links {
+    @include listNone;
     display: none;
+    z-index: 20;
+    order: -1;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+
+
+    @media (min-width: $tablet-width) {
+      @include flexWrap;
+      position: absolute;
+      top: -55px;
+      right: 50px;
+      z-index: 5;
+      isolation: isolate;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 115px;
+      position: static;
+    }
   }
 
   &__header-link-wrapper {
+
+    @media (min-width: $tablet-width) {
+      margin-right: 40px;
+      display: none;
+
+      &--delivery {
+        display: block;
+        font-size: 15px;
+        font-weight: normal;
+        margin: 0;
+        margin-left: auto;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+
   }
 
   &__header-link {
+    &:hover {
+      opacity: .6;
+    }
+
+    &:active {
+      opacity: .3;
+    }
   }
 
   &__img {
@@ -41,6 +149,12 @@
   }
 
   &__footer {
+    @media (min-width: $tablet-width) {
+      margin-top: auto;
+
+
+
+    }
   }
 
   &__bottom-navigation {
@@ -49,16 +163,30 @@
     font-size: 19px;
     font-weight: bold;
     color: #fff;
+
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      align-items: end;
+    }
   }
 
   &__bottom-navigation-item {
+    @media (min-width: $tablet-width) {
+      flex-grow: 1;
+    }
   }
 
   &__bottom-navigation-link {
     display: block;
+
     padding: 30px 200px 30px 30px;
     position: relative;
     transition: padding 0.2s ease-in;
+
+    @media (min-width: $desktop-width) {
+      padding-right: 350px;
+    }
 
     &:active::after {
       opacity: 0.3;
@@ -72,6 +200,7 @@
       padding-top: 25px;
       padding-bottom: 40px;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -93,7 +222,8 @@
       right: 36px;
       background: url(../img/lustra.png) no-repeat center;
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
         background: url(../img/interior.svg@2x.png) no-repeat center/40px auto;
       }
     }
@@ -101,16 +231,20 @@
 
   &__bottom-navigation-link--right {
     background-color: #56c3b2;
+
     &:hover::after {
       top: 16px;
     }
+
     &::after {
       width: 60px;
       height: 60px;
       top: 21px;
       right: 27px;
       background: url(../img/kubik.png) no-repeat center;
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
         background: url(../img/toy-svg@2x.png) no-repeat center/60px auto;
       }
     }
