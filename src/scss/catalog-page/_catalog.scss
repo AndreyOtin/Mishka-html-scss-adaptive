@@ -2,22 +2,38 @@
 
     &__container {
         padding: 0 30px 0 30px;
+
+        @media (min-width: $tablet-width) {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
     }
 
-    &__title {
-        margin: 0;
-        margin-bottom: 30px;
 
+
+
+
+    &__title {
+        margin-bottom: 30px;
     }
 
     &__list {
         @include listNone;
+
+        @media (min-width: $tablet-width) {}
+
+        @media (min-width: $desktop-width) {
+            display: flex;
+            justify-content: space-between;
+        }
 
 
 
     }
 
     &__item {
+        flex-shrink: 0;
+        box-sizing: border-box;
         padding: 195px 30px 30px 30px;
         position: relative;
         border: 1px solid #ececec;
@@ -25,17 +41,47 @@
         &:not(:last-child) {
             margin-bottom: 30px;
         }
+
+        @media (min-width: $tablet-width) {
+            box-sizing: border-box;
+            padding: 30px 30px 30px 365px;
+            min-height: 335px;
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            align-content: stretch;
+        }
+
+        @media (min-width: $desktop-width) {
+            padding: 485px 30px 30px 30px;
+            width: 318px;
+
+            &:not(:last-child) {
+                margin-right: 40px;
+                margin-bottom: 0;
+
+            }
+
+
+        }
     }
 
     &__img {
         height: 195px;
-        width: auto;
         position: absolute;
         top: 0;
         left: 0;
 
+        @media (min-width: $tablet-width) {}
 
+        @media (min-width: $desktop-width) {}
+    }
 
+    &__wrapper {
+        margin-top: auto;
+        border-top: 1px solid #ececec;
+        display: flex;
+        justify-content: space-between;
     }
 
     &__item-title {
@@ -51,7 +97,7 @@
         line-height: 30px;
         color: #444;
         padding-bottom: 26px;
-        border-bottom: 1px solid #ececec;
+
 
 
     }
@@ -61,19 +107,12 @@
         font-weight: bold;
         line-height: 24px;
         color: #000;
-        display: inline-block;
-
-
-    }
-
-    &__button {
-        display: inline-block;
-        margin-left: 100px;
-        vertical-align: middle;
 
 
 
     }
+
+    &__button {}
 }
 
 .icon {}

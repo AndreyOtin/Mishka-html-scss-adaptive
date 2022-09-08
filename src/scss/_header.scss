@@ -7,7 +7,7 @@
 
 
   @media (min-width: $tablet-width) {
-    background-image: linear-gradient(0deg, #f9f9f9 85px, #fff 80px);
+    background-image: linear-gradient(0deg, #f1f1f1 85px, #fff 80px);
   }
   @media (min-width: $desktop-width) {
     background-image: unset;
@@ -149,7 +149,7 @@
     }
 
     .line {
-      display: none;
+
     }
 
     @media (min-width: $tablet-width) {

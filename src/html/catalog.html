@@ -15,7 +15,7 @@
       <div class="main-header__dropout">
         <a href="#" class="main-header__logo">
           <include src="src/img/icons/logo-copy.svg">
-            { "width": "95", "height": "47" }
+
           </include>
         </a>
         <ul class="main-header__site-nav site-nav">
@@ -33,7 +33,7 @@
                 xmlns='http://www.w3.org/2000/svg'>
                 <use xlink:href="@img/icons/sprite.svg#search"></use>
               </svg>
-              Поиск по сайту</a>
+              <span>Поиск по сайту</span></a>
           </li>
           <li class="user-navigation__item user-navigation__item--active">
             <a href="#" class="user-navigation__link user-navigation__link--cart icon icon--cart">
@@ -51,67 +51,148 @@
   </header>
   <main>
     <section class="catalog">
-      <h1 class="catalog__title title">Каталог товаров</h1>
+
+        <h1 class="catalog__title title">Каталог товаров</h1>
+
       <div class="container catalog__container">
         <ul class="catalog__list">
           <li class="catalog__item">
             <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
-           <img class="catalog__img" src="../img/catalog/photo-1-mobile.jpg" alt="" />
+            <div class="catalog__img">
+              <include src='src/html/snippets/picture.html'>
+                {"descktopMedia": "1150px",
+                "tabletMedia": "768px",
+                "descktopSrcWebp": "@img/catalog/photo-1-desktop.webp",
+                "descktopSrcWebp2": "@img/catalog/photo-1-desktop@2x.webp",
+                "descktopSrcWebp3": "@img/catalog/photo-1-desktop@3x.webp",
+                "tabletSrcWebp": "@img/catalog/photo-1-tablet.webp",
+                "tabletSrcWebp2": "@img/catalog/photo-1-tablet@2x.webp",
+                "tabletSrcWebp3": "",
+                "SrcWebp": "@img/catalog/photo-1-mobile.webp",
+                "SrcWebp2": "@img/catalog/photo-1-mobile@2x.webp",
+                "SrcWebp3": "@img/catalog/photo-1-mobile@3x.webp",
+                "descktopSrc": "@img/catalog/photo-1-desktop.jpg",
+                "descktopSrc2": "@img/catalog/photo-1-desktop@2x.jpg",
+                "descktopSrc3": "@img/catalog/photo-1-desktop@3x.jpg",
+                "tabletSrc": "@img/catalog/photo-1-tablet.jpg",
+                "tabletSrc2": "@img/catalog/photo-1-tablet@2x.jpg",
+                "tabletSrc3": "",
+                "Src": "@img/catalog/photo-1-mobile.jpg",
+                "Src2": "@img/catalog/photo-1-mobile@2x.jpg",
+                "Src3": "@img/catalog/photo-1-mobile@3x.jpg"}
+              </include>
+            </div>
             <p class="catalog__text">Рост 30 см, вес 200 г</p>
-            <p class="catalog__price">1 200 руб.</p>
-            <button class="catalog__button icon icon--catalog-cart">
-              <span class="visually-hidden">Добавить в корзину</span>
-              <svg width="20" height="20" aria-hidden='true' role='presentation' xmlns='http://www.w3.org/2000/svg'>
-                <use xlink:href='@img/icons/sprite.svg#cart'></use>
-              </svg>
-            </button>
+            <div class="catalog__wrapper">
+              <p class="catalog__price">1 200 руб.</p>
+              <button class="catalog__button icon icon--catalog-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg width="20" height="20" aria-hidden='true' role='presentation' xmlns='http://www.w3.org/2000/svg'>
+                  <use xlink:href='@img/icons/sprite.svg#cart'></use>
+                </svg>
+              </button>
+            </div>
           </li>
           <li class="catalog__item">
             <h3 class="catalog__item-title">Корзинка для белья</h3>
-            <img class="catalog__img" src="../img/catalog/photo-2-mobile.jpg" alt="" />
+            <div class="catalog__img">
+              <include src='src/html/snippets/picture.html'>
+                {"descktopMedia": "1150px",
+                "tabletMedia": "768px",
+                "descktopSrcWebp": "@img/catalog/photo-2-desktop.webp",
+                "descktopSrcWebp2": "@img/catalog/photo-2-desktop@2x.webp",
+                "descktopSrcWebp3": "@img/catalog/photo-2-desktop@3x.webp",
+                "tabletSrcWebp": "@img/catalog/photo-2-tablet.webp",
+                "tabletSrcWebp2": "@img/catalog/photo-2-tablet@2x.webp",
+                "tabletSrcWebp3": "",
+                "SrcWebp": "@img/catalog/photo-2-mobile.webp",
+                "SrcWebp2": "@img/catalog/photo-2-mobile@2x.webp",
+                "SrcWebp3": "@img/catalog/photo-2-mobile@3x.webp",
+                "descktopSrc": "@img/catalog/photo-2-desktop.jpg",
+                "descktopSrc2": "@img/catalog/photo-2-desktop@2x.jpg",
+                "descktopSrc3": "@img/catalog/photo-2-desktop@3x.jpg",
+                "tabletSrc": "@img/catalog/photo-2-tablet.jpg",
+                "tabletSrc2": "@img/catalog/photo21-tablet@2x.jpg",
+                "tabletSrc3": "",
+                "Src": "@img/catalog/photo-2-mobile.jpg",
+                "Src2": "@img/catalog/photo-2-mobile@2x.jpg",
+                "Src3": "@img/catalog/photo-2-mobile@3x.jpg"}
+              </include>
+            </div>
             <p class="catalog__text">Диаметр 15 см, высота 10 см</p>
-            <p class="catalog__price">690 руб.</p>
-            <button class="catalog__button icon icon--catalog-cart">
-              <span class="visually-hidden">Добавить в корзину</span>
-              <svg width="20" height="20" aria-hidden='true' role='presentation' xmlns='http://www.w3.org/2000/svg'>
-                <use xlink:href='@img/icons/sprite.svg#cart'></use>
-              </svg>
-            </button>
+            <div class="catalog__wrapper">
+              <p class="catalog__price">690 руб.</p>
+              <button class="catalog__button icon icon--catalog-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg width="20" height="20" aria-hidden='true' role='presentation' xmlns='http://www.w3.org/2000/svg'>
+                  <use xlink:href='@img/icons/sprite.svg#cart'></use>
+                </svg>
+              </button>
+            </div>
           </li>
           <li class="catalog__item">
             <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
-            <img class="catalog__img" src="../img/catalog/photo-3-mobile.jpg" alt="" />
+            <div class="catalog__img">
+              <include src='src/html/snippets/picture.html'>
+                {"descktopMedia": "1150px",
+                "tabletMedia": "768px",
+                "descktopSrcWebp": "@img/catalog/photo-3-desktop.webp",
+                "descktopSrcWebp2": "@img/catalog/photo-3-desktop@2x.webp",
+                "descktopSrcWebp3": "@img/catalog/photo-3-desktop@3x.webp",
+                "tabletSrcWebp": "@img/catalog/photo-3-tablet.webp",
+                "tabletSrcWebp2": "@img/catalog/photo-3-tablet@2x.webp",
+                "tabletSrcWebp3": "",
+                "SrcWebp": "@img/catalog/photo-3-mobile.webp",
+                "SrcWebp2": "@img/catalog/photo-3-mobile@2x.webp",
+                "SrcWebp3": "@img/catalog/photo-3-mobile@3x.webp",
+                "descktopSrc": "@img/catalog/photo-3-desktop.jpg",
+                "descktopSrc2": "@img/catalog/photo-3-desktop@2x.jpg",
+                "descktopSrc3": "@img/catalog/photo-3-desktop@3x.jpg",
+                "tabletSrc": "@img/catalog/photo-3-tablet.jpg",
+                "tabletSrc2": "@img/catalog/photo21-tablet@2x.jpg",
+                "tabletSrc3": "",
+                "Src": "@img/catalog/photo-3-mobile.jpg",
+                "Src2": "@img/catalog/photo-3-mobile@2x.jpg",
+                "Src3": "@img/catalog/photo-3-mobile@3x.jpg"}
+              </include>
+            </div>
             <p class="catalog__text">Диаметр 30 см, высота 30 см</p>
-            <p class="catalog__price">1 500 руб.</p>
-            <button class="catalog__button icon icon--catalog-cart">
-              <span class="visually-hidden">Добавить в корзину</span>
-              <svg width="20" height="20" aria-hidden='true' role='presentation' xmlns='http://www.w3.org/2000/svg'>
-                <use xlink:href='@img/icons/sprite.svg#cart'></use>
-              </svg>
-            </button>
+            <div class="catalog__wrapper">
+              <p class="catalog__price">1 500 руб.</p>
+              <button class="catalog__button icon icon--catalog-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg width="20" height="20" aria-hidden='true' role='presentation' xmlns='http://www.w3.org/2000/svg'>
+                  <use xlink:href='@img/icons/sprite.svg#cart'></use>
+                </svg>
+              </button>
+            </div>
           </li>
         </ul>
       </div>
     </section>
     <section class="product">
       <div class="container product__container">
-       <div class="product__wrapper">
+        <div class="product__wrapper">
           <h2 class="product__title">Процесс производства</h2>
-        <div class="product__video-wrapper">
-            <video src="#" class="product__video" poster="@img/video-mobile.png"></video>
+          <div class="product__video-wrapper">
+            <video src="#" class="product__video" poster="@img/video-desktop.jpg"></video>
             <button class="product__button"><span class="visually-hidden">Включить видео</span></button>
-        </div>
+          </div>
           <p class="product__text">
             По просьбам наших любимых фолловеров мы сняли для вас подробное видео
             о том, как появляются наши товары.
           </p>
           <a href="#" class="product__link btn btn--w190">Сделать заказ</a>
-       </div>
+        </div>
     </section>
     </div>
   </main>
   <footer class="main-footer">
     <div class="main-footer__container container">
+      <a href="#" class="main-footer__logo">
+        <include src="src/img/icons/logo-copy.svg">
+        </include>
+      </a>
       <ul class="main-footer__socials socials">
         <li class="socials__item">
           <a href="#" class="socials__link socials__link--">

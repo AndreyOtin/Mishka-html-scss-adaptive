@@ -10,12 +10,12 @@
 </head>
 
 <body class="form-page">
-    <header class="main-header container">
-        <nav class="main-header__nav main-header__nav--closed">
+    <header class="main-header ">
+        <nav class="main-header__nav main-header__nav--open container">
             <div class="main-header__dropout">
                 <a href="#" class="main-header__logo">
                     <include src="src/img/icons/logo-copy.svg">
-                        { "width": "95", "height": "47" }
+
                     </include>
                 </a>
                 <ul class="main-header__site-nav site-nav">
@@ -33,7 +33,7 @@
                                 xmlns='http://www.w3.org/2000/svg'>
                                 <use xlink:href="@img/icons/sprite.svg#search"></use>
                             </svg>
-                            Поиск по сайту</a>
+                            <span>Поиск по сайту</span></a>
                     </li>
                     <li class="user-navigation__item user-navigation__item--active">
                         <a href="#" class="user-navigation__link user-navigation__link--cart icon icon--cart">
@@ -49,7 +49,7 @@
             <button class="main-header__button main-header__button--"></button>
         </nav>
     </header>
-    <main class="">
+    <main>
         <h1 class="form-page__title title">Вязание на заказ</h1>
         <div class="container form-page__container">
             <p class="form-page__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и
@@ -59,97 +59,112 @@
             </p>
             <form action='#' class='form'>
 
-                <fieldset class="form__type-group">
-                    <legend class="form__group-title line-title">ТИП</legend>
-                    <div class='form__wrapper form__wrapper--'>
-                        <input class='form__input form__input--type visually-hidden' type='radio' id='accessory'
-                            name="type" />
-                        <label class='form__label form__label--type ' for='accessory'>Аксессуар для
-                            интерьера</label>
-                    </div>
-                    <div class='form__wrapper form__wrapper--'>
-                        <input class='form__input form__input--type visually-hidden' type='radio' id='toy'
-                            name="type" />
-                        <label class='form__label form__label--type' for='toy'>Детская игрушка</label>
-                    </div>
+                <fieldset class=" ">
+                    <div class="form__group form__group--type-group">
+                        <legend class="form__group-title line-title">ТИП</legend>
+                        <div class="form__right-column">
+                            <div class='form__wrapper form__wrapper--up'>
+                                <input class='form__input form__input--type visually-hidden' type='radio' id='accessory'
+                                    name="type" />
+                                <label class='form__label form__label--type ' for='accessory'>Аксессуар для
+                                    интерьера</label>
+                            </div>
+                            <div class='form__wrapper form__wrapper--dw'>
+                                <input class='form__input form__input--type visually-hidden' type='radio' id='toy'
+                                    name="type" />
+                                <label class='form__label form__label--type' for='toy'>Детская игрушка</label>
+                            </div>
+                        </div>
 
-                </fieldset>
-                <fieldset class="form__color-group ">
-                    <legend class="form__group-title line-title"> Цвет</legend>
-                    <div class='form__wrapper form__wrapper--'>
-                        <input name="color" class='form__input form__input--color visually-hidden' type='checkbox'
-                            id='white' value="Белый" />
-                        <label class='form__label form__label--color' for='white'>Белый</label>
-                    </div>
-                    <div class='form__wrapper form__wrapper--'>
-                        <input class='form__input form__input--color visually-hidden' name="color" type='checkbox'
-                            id='grey' value="Серый" />
-                        <label class='form__label form__label--color' for='grey'>Серый</label>
-                    </div>
-                    <div class='form__wrapper form__wrapper--'>
-                        <input class='form__input form__input--color visually-hidden' name="color" type='checkbox'
-                            id='tif' value="«Тиффани»" />
-                        <label class='form__label form__label--color' for='tif'>«Тиффани»</label>
-                    </div>
-                    <div class='form__wrapper form__wrapper--'>
-                        <input class='form__input form__input--color visually-hidden' name="color" type='checkbox'
-                            id='black' value="Черный" />
-                        <label class='form__label form__label--color' for='black'>Черный</label>
-                    </div>
-                    <div class='form__wrapper form__wrapper--'>
-                        <input class='form__input form__input--color visually-hidden' name="color" type='checkbox'
-                            id='pink' value="Розовый" />
-                        <label class='form__label form__label--color' for='pink'>Розовый</label>
-                    </div>
-                    <div class='form__wrapper form__wrapper--'>
-                        <input class='form__input form__input--color visually-hidden' name="color" type='checkbox'
-                            id='orange' value="Оранжевый" />
-                        <label class='form__label form__label--color' for='orange'> Оранжевый</label>
+
                     </div>
                 </fieldset>
-                <fieldset class="form__name-group">
-                    <legend class="form__group-title line-title"> ФИО
-                    </legend>
-                    <div class='form__wrapper form__input-wrapper--name '>
-                        <label class='form__label form__label--name' for='name'>Имя:</label>
-                        <input class='form__input form__input--name' type='text' id='name'
-                            placeholder="Введите ваше имя*" />
-                    </div>
-                    <div class='form__wrapper form__input-wrapper--name'>
-                        <label class='form__label form__label--name' for='surname'>Фамилия:</label>
-                        <input class='form__input form__input--name' type='text' id='surname'
-                            placeholder="Укажите фамилию*" />
-                    </div>
-                    <div class='form__wrapper form__input-wrapper--name'>
-                        <label class='form__label form__label--name' for='midlename'>Отчество:</label>
-                        <input class='form__input form__input--name' type='text' id='midlename'
-                            placeholder="Отчество, если желаете" />
+                <fieldset class=" ">
+                   <div class="form__group form__group--color-group">
+                        <legend class="form__group-title line-title"> Цвет</legend>
+                        <div class="form__right-column">
+                            <div class='form__wrapper form__wrapper--'>
+                                <input name="color" class='form__input form__input--color visually-hidden' type='checkbox'
+                                    id='white' value="Белый" />
+                                <label class='form__label form__label--color' for='white'>Белый</label>
+                            </div>
+                            <div class='form__wrapper form__wrapper--'>
+                                <input class='form__input form__input--color visually-hidden' name="color" type='checkbox'
+                                    id='grey' value="Серый" />
+                                <label class='form__label form__label--color' for='grey'>Серый</label>
+                            </div>
+                            <div class='form__wrapper form__wrapper--'>
+                                <input class='form__input form__input--color visually-hidden' name="color" type='checkbox'
+                                    id='tif' value="«Тиффани»" />
+                                <label class='form__label form__label--color' for='tif'>«Тиффани»</label>
+                            </div>
+                            <div class='form__wrapper form__wrapper--'>
+                                <input class='form__input form__input--color visually-hidden' name="color" type='checkbox'
+                                    id='black' value="Черный" />
+                                <label class='form__label form__label--color' for='black'>Черный</label>
+                            </div>
+                            <div class='form__wrapper form__wrapper--'>
+                                <input class='form__input form__input--color visually-hidden' name="color" type='checkbox'
+                                    id='pink' value="Розовый" />
+                                <label class='form__label form__label--color' for='pink'>Розовый</label>
+                            </div>
+                            <div class='form__wrapper form__wrapper--'>
+                                <input class='form__input form__input--color visually-hidden' name="color" type='checkbox'
+                                    id='orange' value="Оранжевый" />
+                                <label class='form__label form__label--color' for='orange'> Оранжевый</label>
+                            </div>
+                        </div>
+                   </div>
+                </fieldset>
+                <fieldset class="">
+                    <div class="form__group form__group--name-group">
+                        <legend class="form__group-title line-title"> ФИО
+                        </legend>
+                        <div class="form__right-column form__right-column--name">
+                            <div class='form__wrapper form__input-wrapper--name '>
+                                <label class='form__label form__label--name' for='name'>Имя:</label>
+                                <input class='form__input form__input--name' type='text' id='name'
+                                    placeholder="Введите ваше имя*" />
+                            </div>
+                            <div class='form__wrapper form__input-wrapper--name'>
+                                <label class='form__label form__label--name' for='surname'>Фамилия:</label>
+                                <input class='form__input form__input--name' type='text' id='surname'
+                                    placeholder="Укажите фамилию*" />
+                            </div>
+                            <div class='form__wrapper form__input-wrapper--name'>
+                                <label class='form__label form__label--name' for='midlename'>Отчество:</label>
+                                <input class='form__input form__input--name' type='text' id='midlename'
+                                    placeholder="Отчество, если желаете" />
+                            </div>
+                        </div>
                     </div>
                 </fieldset>
-                <div class='form__wrapper form__wrapper--tel '>
-                    <label class='form__label form__label--tel line-title' for='tel'>тел:</label>
+                <div class='form__group form__group--tel '>
+                    <label class='form__group-title line-title' for='tel'>тел:</label>
                     <input class='form__input form__input--tel ' type='tel' id='tel' placeholder="+7 ХХХ ХХ ХХ*" />
                     <svg width="25" height="24" class='form__icon' aria-hidden='true' role='presentation'
                         xmlns='http://www.w3.org/2000/svg'>
                         <use xlink:href='@img/icons/sprite.svg#phone'></use>
                     </svg>
                 </div>
-                <div class='form__wrapper form__wrapper--'>
-                    <label class='form__label form__label--email line-title' for='email'>E-mail</label>
+                <div class='form__group form__group--email'>
+                    <label class='form__group-title line-title' for='email'>E-mail</label>
                     <input class='form__input form__input--email' type='email' id='email' placeholder="Ваш Email*" />
                     <svg width="32" height="30" class='form__icon form__icon--mail' aria-hidden='true'
                         role='presentation' xmlns='http://www.w3.org/2000/svg'>
                         <use xlink:href='@img/icons/sprite.svg#mail'></use>
                     </svg>
                 </div>
-                <div class='form__wrapper form__wrapper-- '>
-                    <label class='form__label form__label--add line-title' for='additional'>Доп</label>
-                    <textarea class="form__textarea" name="additional" id="additional" rows="10"
+                <div class='form__group form__group--add '>
+                    <label class='form__group-title line-title' for='additional'>Доп</label>
+                    <textarea class="form__textarea " name="additional" id="additional" rows="10"
                         placeholder="Опишите все ваши пожелания к заказу"></textarea>
                 </div>
 
-                <p class="form__text"><sup>*</sup>Поля обязательны для заполнения</p>
-                <button class="form__button btn" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+              <div class="form__butn-wrapper">
+                    <p class="form__text"><sup>*</sup>Поля обязательны для заполнения</p>
+                    <button class="form__button btn" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+              </div>
             </form>
         </div>
     </main>
