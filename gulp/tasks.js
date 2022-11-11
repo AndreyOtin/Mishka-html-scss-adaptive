@@ -35,7 +35,6 @@ export default {
 function del(done) {
   deleteSync(paths.folder.build)
   done()
-
 }
 
 function watcher() {
